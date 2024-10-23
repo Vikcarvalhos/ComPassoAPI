@@ -7,7 +7,6 @@ from folium.plugins import AntPath
 from folium.raster_layers import ImageOverlay
 from folium.plugins import LocateControl
 from .utils import get_coordinates_by_id, get_route_by_control_and_interest
-import uuid
 
 main = Blueprint('main', __name__)
 
