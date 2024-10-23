@@ -1,19 +1,8 @@
-from flask import Flask
-from flask_cors import CORS
-from app.routes import main  # Importar diretamente as rotas
+from app import create_app
 
-def create_app():
-    app = Flask(__name__)
-    CORS(app, resources={r"/*": {"origins": "*"}})
-
-    # Registrar as rotas
-    app.register_blueprint(main)
-
-    return app
-
-# Criar a aplicação
+# Create the application
 app = create_app()
 
-# Executar a aplicação se o arquivo for chamado diretamente
+# Run the application if the file is called directly
 if __name__ == "__main__":
     app.run(debug=False)
