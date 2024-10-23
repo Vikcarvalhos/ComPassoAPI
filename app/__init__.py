@@ -3,7 +3,7 @@ from flask_cors import CORS
 from .routes import main  # Use relative import
 
 def create_app():
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='static')
     CORS(app, resources={r"/*": {"origins": "*"}})
 
     # Register the routes
